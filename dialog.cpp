@@ -28,26 +28,22 @@ QString  Nazvaniye_fayla_s_bmp;
 /// 
 /// 
 void findNewestFile(const QString& searchPath, const QString& fileName) {
-    QDir dir(searchPath);
-    dir.setFilter(QDir::Files | QDir::Dirs | QDir::NoDotAndDotDot);
-// Fraction f;
-//f.getNumerator();
-    QFileInfoList list= //=
-   // list.ent
-     QDir::entryInfoList
-     ("/home/viktor/my_projects_qt_2/Sgenerirovannye_fayly/"
-     ,
-      QDir::DirsFirst | QDir::Time
-      );
+//     QDir dir(searchPath);
+//     dir.setFilter(QDir::Files | QDir::Dirs | QDir::NoDotAndDotDot);
+// // Fraction f;
+// //f.getNumerator();
+//     QFileInfoList list= //=
+//    // list.ent
+//      QDir::entryInfoList     ("/home/viktor/my_projects_qt_2/Sgenerirovannye_fayly/"     ,      QDir::DirsFirst | QDir::Time      );
 
-    for (const QFileInfo& fileInfo : list) {
-        if (fileInfo.isDir()) {
-            findNewestFile(fileInfo.filePath(), fileName);
-        } else if (fileInfo.fileName() == fileName) {
-            qDebug() << "Newest file with name" << fileName << "is:" << fileInfo.filePath();
-            return;
-        }
-    }
+//     for (const QFileInfo& fileInfo : list) {
+//         if (fileInfo.isDir()) {
+//             findNewestFile(fileInfo.filePath(), fileName);
+//         } else if (fileInfo.fileName() == fileName) {
+//             qDebug() << "Newest file with name" << fileName << "is:" << fileInfo.filePath();
+//             return;
+//         }
+//     }
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
